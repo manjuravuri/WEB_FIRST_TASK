@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            #di{
+    width: 430px;
+    height: fit-content;
+    display: inline-block;
+    background-color: yellow;
+    left: 50%;
+    top: 50%;
+    margin-left: 510px;
+    border-radius: 5px;
+}
+body{
+    cursor: pointer;
+    background-image: url("https://i.pinimg.com/originals/ac/54/a1/ac54a128942c750799c2c1fe144d2467.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-size: cover;
+}
+#ig{
+    width: 26px;
+    height: 25px;
+}
+.t{
+    margin-left: 120px;
+    margin-top: 30px;
+}
+#input{
+    margin-left: 47px;
+    border-radius: 2px;
+    width:250px;
+    height:20px;
+    font-size: 25px;
+    border-radius: 1px;
+}
+.btn{
+    height: 34px;
+    width: 57px;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    outline: none;
+    color: black;
+    background-color: pink;
+    border-radius: 50%;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 300px;
+    height: 28px;
+    background-color: beige;
+}
+button{
+    margin-left: 328px;
+    margin-top: -2.15em;
+    width: 40px;
+    height: 29px;
+    border-radius: 4px;
+}
+li:hover{
+    background-color: white;
+    text-decoration: line-through;
+    color: red;
+    border-radius: 10%;
+}
+        </style>
+        <script>
+            function todo(){
+                var p=document.getElementById("input").value;
+                var q=document.getElementById("s");
+                var r=document.createElement("li");
+                r.innerHTML=p;
+                r.id="w";
+                q.appendChild(r);
+                var y=document.createElement("button");
+                var z=document.createTextNode("X");
+                y.appendChild(z);
+                q.appendChild(y);
+                y.id="b";
+                y.onclick=function click(){
+                document.getElementById("b").style.display="none";
+                document.getElementById("w").style.display="none";
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <div id="di" class="header">
+            <h2 class="t">TO DO LIST<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAkaNk6MNEKJHY9tidrmKQP1nVoCikOBHyrw&usqp=CAU" id="ig"></h2>
+            <input type="text" id="input" placeholder=" COURSE....">
+            <button onclick="todo()" class="btn">ADD</button>
+             <div id="s">
+                <ul id="d">
+            </ul>
+
+             </div>
+        </div>
+    </body>
+</html>
